@@ -1,5 +1,5 @@
-<pad>
-<unk>
+[PAD]
+[UNK]
  
 !
 '
