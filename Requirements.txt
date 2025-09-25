@@ -1,7 +1,0 @@
-streamlit
-torch
-tokenizers
-numpy
-pandas
-tqdm
-matplotlib
