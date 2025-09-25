@@ -1,18 +1,7 @@
-# Core
-torch>=2.2
-torchvision>=0.17
-torchaudio>=2.2
-
-# Data & utils
-pandas>=2.2
-numpy>=1.26
-tqdm>=4.66
-
-# Tokenization
-tokenizers>=0.15
-
-# App
-streamlit>=1.36
-
-matplotlib>=3.8
-
+streamlit
+torch
+tokenizers
+numpy
+pandas
+tqdm
+matplotlib
