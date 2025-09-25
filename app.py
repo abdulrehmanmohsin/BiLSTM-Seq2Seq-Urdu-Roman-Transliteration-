@@ -38,9 +38,9 @@ def load_src_vocab(path_txt):
             if tok:
                 tokens.append(tok)
     token2id = {t: i for i, t in enumerate(tokens)}
-    if "<pad>" not in token2id or "<unk>" not in token2id:
-        raise RuntimeError("src_vocab.txt must contain <pad> and <unk> (exact strings).")
-    return tokens, token2id, token2id["<pad>"], token2id["<unk>"]
+    if "[PAD]" not in token2id or "[UNK]" not in token2id:
+        raise RuntimeError("src_vocab.txt must contain [PAD] and [UNK] (exact strings).")
+    return tokens, token2id, token2id["[PAD]"], token2id["[UNK]"]
 
 def encode_src_chars(s, token2id, unk_id, max_len=256):
     chs = list(str(s))[:max_len]
