@@ -8,4 +8,5 @@ Key challenges and how we addressed them:
 (2) **Train–inference mismatch** (incorrect decoder inputs / early EOS) was fixed by enforcing **`dec_inp = [BOS] + tgt[:-1]`** and ensuring distinct PAD/BOS/EOS IDs persisted in the checkpoint. 
 (3) A **train–valid gap** emerged as models deepened; **label smoothing** and moderating **weight decay (~1e-5)** reduced over-confidence and improved generalization. 
 (4) **Depth vs. convergence:** transliteration favors **shallower decoders (2–3 layers)** with dropout 0.25–0.30; we observed steadier validation gains than with deeper stacks. 
-(5) **Rare/archaic lexemes** in Rekhta prompted hallucinations; **beam search with length penalty** plus output cleanup curtailed long, off-target strings. Together, these choices yield a practical, robust transliterator for poetry-style Urdu sourced from **
+(5) **Rare/archaic lexemes** in Rekhta prompted hallucinations; **beam search with length penalty** plus output cleanup curtailed long, off-target strings. Together, these choices yield a practical, robust transliterator for poetry-style Urdu sourced from **Rekhta**
+[Online Hosted app link](https://bilstmnlp.streamlit.app/)
