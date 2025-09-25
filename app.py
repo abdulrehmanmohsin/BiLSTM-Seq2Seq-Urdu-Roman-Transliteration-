@@ -11,8 +11,8 @@ import streamlit as st
 # 0) CONFIG — EDIT THESE PATHS
 # ==============================
 BEST_CKPT = "bilstm_wp_best.pt"  # your trained .pt
-WP_JSON   = "roman_wp.json"                  # target WordPiece tokenizer JSON
-SRC_VOCAB_TXT = "src_vocab.txt"                                         # one token per line; must include <pad>, <unk>
+WP_JSON   = "roman_wp-tokenizer.json"                  # target WordPiece tokenizer JSON
+SRC_VOCAB_TXT = "roman_wp-vocab.txt"                                         # one token per line; must include <pad>, <unk>
 
 # Model dims are usually saved in the checkpoint config; these are fallback defaults:
 FALLBACK = dict(EMB_DIM_SRC=256, EMB_DIM_TGT=256, HID_DIM=512, ENC_LAYERS=2, DEC_LAYERS=3, DROPOUT=0.3)
